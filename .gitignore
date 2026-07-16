@@ -1,0 +1,41 @@
+# === 构建产物 ===
+.gradle/
+**/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# === Kotlin 缓存 ===
+.kotlin/
+
+# === IDE ===
+.idea/
+*.iml
+*.iws
+.vscode/
+*.swp
+
+# === OS ===
+.DS_Store
+Thumbs.db
+
+# === 本地配置（每台机器不同）===
+local.properties
+
+# === Android ===
+*.apk
+*.aab
+*.dex
+.cxx/
+
+# === Node (wasm/js 构建)===
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# === 本地辅助目录（非项目源码）===
+android-sdk/
+.android-prefs/
+gradle-home/
+gradle-error.log
+
+# === 日志 ===
+*.log

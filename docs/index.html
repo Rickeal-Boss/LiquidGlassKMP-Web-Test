@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>KMP 液态玻璃 Web 预览</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+      }
+      .container {
+        text-align: center;
+        padding: 40px 20px;
+      }
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 12px;
+        background: linear-gradient(90deg, #e0c3fc, #8ec5fc);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .subtitle {
+        font-size: 1.1rem;
+        opacity: 0.7;
+        margin-bottom: 48px;
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 24px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .card {
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 24px;
+        padding: 36px 28px;
+        text-decoration: none;
+        color: #fff;
+        transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+        display: block;
+      }
+      .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        border-color: rgba(255, 255, 255, 0.35);
+      }
+      .card-icon {
+        font-size: 3rem;
+        margin-bottom: 16px;
+      }
+      .card-title {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+      .card-desc {
+        font-size: 0.95rem;
+        opacity: 0.7;
+        line-height: 1.5;
+      }
+      .badge {
+        display: inline-block;
+        margin-top: 14px;
+        padding: 4px 12px;
+        background: rgba(255, 255, 255, 0.12);
+        border-radius: 999px;
+        font-size: 0.8rem;
+        opacity: 0.8;
+      }
+      .footer {
+        margin-top: 48px;
+        font-size: 0.85rem;
+        opacity: 0.5;
+      }
+      a { color: inherit; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>KMP 液态玻璃 Web 预览</h1>
+      <p class="subtitle">基于 Kotlin Multiplatform + Compose Multiplatform + Skia 的 Web 端液态玻璃效果</p>
+
+      <div class="cards">
+        <a class="card" href="./miuix/index.html">
+          <div class="card-icon">🎨</div>
+          <div class="card-title">miuix 液态玻璃</div>
+          <div class="card-desc">
+            小米 HyperOS 风格 Compose UI 框架，含液态玻璃导航栏示例。建议用移动设备视图查看（窄屏 &lt; 840dp）。
+          </div>
+          <span class="badge">wasmJs · Skia</span>
+        </a>
+
+        <a class="card" href="./kyant/index.html">
+          <div class="card-icon">🔬</div>
+          <div class="card-title">kyant Backdrop Catalog</div>
+          <div class="card-desc">
+            kyant 完整液态玻璃组件库，含 14 个示例：控件、锁屏、控制中心、放大镜、渐进模糊等。
+          </div>
+          <span class="badge">wasmJs · Skia</span>
+        </a>
+      </div>
+
+      <p class="footer">
+        首次加载需下载 ~38MB wasm 运行时（含 Skia），请耐心等待
+      </p>
+    </div>
+  </body>
+</html>
